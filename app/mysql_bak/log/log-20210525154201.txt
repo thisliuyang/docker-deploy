@@ -1,0 +1,2 @@
+20210525154201--->start backup /Users/web/study/docker/new_contract_registration/mysql_bak/new_contract_registration-20210525154201.sql
+20210525154201--->end backup /Users/web/study/docker/new_contract_registration/mysql_bak/new_contract_registration-20210525154201.sql

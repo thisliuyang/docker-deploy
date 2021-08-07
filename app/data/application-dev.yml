@@ -1,0 +1,45 @@
+spring:
+  redis:
+    ##redis 单机环境配置
+    host: 192.168.61.17
+    port: 6379
+    password:
+    database: 0
+    ssl: false
+  datasource:
+    url: jdbc:mysql://192.168.61.16:3307/new_contract_registration?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root_password_metadata
+#文件模版信息
+doc:
+  #  contract-registration-path: D:\project\new_contract_registration\doc\副本技术合同技术性收入核定表.docx
+  #  contract-income-path: D:\project\new_contract_registration\doc\国家系统合同技术合同登记表.docx
+  #  temp-path: D:\project\new_contract_registration\doc\temp\
+  contract-registration-path: ./doc/templates/副本技术合同技术性收入核定表.docx
+  contract-income-path: ./doc/templates/国家系统合同技术合同登记表.docx
+  temp-path: ./doc/templates/temp/
+  stamp-url: http://192.168.61.40:8080/hbcaess/rest/signPDFByTemplate
+imagePath:
+  rootPath:
+
+#第三方登陆
+social:
+  enabled: true
+  domain: http://127.0.0.1:1888
+
+#blade配置
+blade:
+  #分布式锁配置
+  lock:
+    ##是否启用分布式锁
+    enabled: false
+    ##redis服务地址
+    address: redis://127.0.0.1:6379
+  #本地文件上传
+  file:
+    remote-mode: true
+    upload-domain: http://localhost:8999
+    remote-path: /usr/share/nginx/html
+redirect:
+  address: 183.95.190.185:801
+
